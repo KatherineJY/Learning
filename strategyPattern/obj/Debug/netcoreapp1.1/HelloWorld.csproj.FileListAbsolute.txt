@@ -1,0 +1,8 @@
+/Users/lancer/DotnetProjects/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.deps.json
+/Users/lancer/DotnetProjects/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.runtimeconfig.json
+/Users/lancer/DotnetProjects/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.runtimeconfig.dev.json
+/Users/lancer/DotnetProjects/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.dll
+/Users/lancer/DotnetProjects/HelloWorld/bin/Debug/netcoreapp1.1/HelloWorld.pdb
+/Users/lancer/DotnetProjects/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.AssemblyInfo.cs
+/Users/lancer/DotnetProjects/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.dll
+/Users/lancer/DotnetProjects/HelloWorld/obj/Debug/netcoreapp1.1/HelloWorld.pdb

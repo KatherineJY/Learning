@@ -1,0 +1,6 @@
+C:\Users\Win8\Documents\Visual Studio 2015\Projects\Mylisten\Mylisten\bin\Debug\Mylisten.exe.config
+C:\Users\Win8\Documents\Visual Studio 2015\Projects\Mylisten\Mylisten\bin\Debug\Mylisten.exe
+C:\Users\Win8\Documents\Visual Studio 2015\Projects\Mylisten\Mylisten\bin\Debug\Mylisten.pdb
+C:\Users\Win8\Documents\Visual Studio 2015\Projects\Mylisten\Mylisten\obj\Debug\Mylisten.exe
+C:\Users\Win8\Documents\Visual Studio 2015\Projects\Mylisten\Mylisten\obj\Debug\Mylisten.pdb
+C:\Users\Win8\Documents\Visual Studio 2015\Projects\Mylisten\Mylisten\obj\Debug\Mylisten.csprojResolveAssemblyReference.cache
