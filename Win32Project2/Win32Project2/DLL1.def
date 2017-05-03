@@ -1,0 +1,5 @@
+LIBRARY Win32Project2
+
+EXPORTS
+add
+subtract
