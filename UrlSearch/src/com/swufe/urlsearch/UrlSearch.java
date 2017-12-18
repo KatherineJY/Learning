@@ -26,12 +26,15 @@ public class UrlSearch {
 		public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 			StringTokenizer itr = new StringTokenizer(value.toString());
 			while (itr.hasMoreTokens()) {
-				word.set("all");
-				context.write(word, one);
 				String cur = itr.nextToken();
-				if( pattern.matcher(cur).matches() ) {
-					word.set("urlSearch");
+				if (cur.startsWith("[") && cur.endsWith("]")) {
+					word.set("all");
 					context.write(word, one);
+					String searchWord = String.valueOf(cur.toCharArray(), 1, cur.length() - 1).toLowerCase();
+					if( pattern.matcher(searchWord).matches() ) {
+						word.set("urlSearch");
+						context.write(word, one);
+					}
 				}
 			}
 		}
