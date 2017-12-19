@@ -27,11 +27,20 @@ public class UrlSearch {
 			StringTokenizer itr = new StringTokenizer(value.toString());
 			while (itr.hasMoreTokens()) {
 				String cur = itr.nextToken();
-				if (cur.startsWith("[") && cur.endsWith("]")) {
+				if (cur.startsWith("[") && cur.endsWith("]\"")) {
 					word.set("all");
 					context.write(word, one);
-					String searchWord = String.valueOf(cur.toCharArray(), 1, cur.length() - 1).toLowerCase();
-					if( pattern.matcher(searchWord).matches() ) {
+					int len = cur.length();
+					cur = cur.substring(1, len-1);
+					if( cur.startsWith("\"") && cur.endsWith("\"") ) {
+						len = cur.length();
+						cur = cur.substring(1, len-1);
+					}
+					if( !cur.startsWith("http") && !cur.startsWith("https") && !cur.startsWith("//") ) {
+						cur = "http://" + cur;
+					}
+					
+					if( pattern.matcher(cur).matches() ) {
 						word.set("urlSearch");
 						context.write(word, one);
 					}
