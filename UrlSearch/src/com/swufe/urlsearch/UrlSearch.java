@@ -20,14 +20,13 @@ public class UrlSearch {
 
 		private final static IntWritable one = new IntWritable(1);
 		private Text word = new Text();
-		private String regx = "(ht|f)tp(s?)\\:\\/\\/[0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*(:(0-9)*)*(\\/?)([a-zA-Z0-9\\-\\.\\?\\,\\'\\/\\\\\\+&amp;%\\$#_]*)?";
-		private Pattern pattern = Pattern.compile(regx); 
+		private String regx ="(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]";private Pattern pattern = Pattern.compile(regx); 
 		
 		public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
 			StringTokenizer itr = new StringTokenizer(value.toString());
 			while (itr.hasMoreTokens()) {
 				String cur = itr.nextToken();
-				if (cur.startsWith("[") && cur.endsWith("]\"")) {
+				if (cur.startsWith("[") && cur.endsWith("]")) {
 					word.set("all");
 					context.write(word, one);
 					int len = cur.length();
